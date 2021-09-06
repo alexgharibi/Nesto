@@ -58,7 +58,7 @@ export const LoansContextProvider = (props) => {
       value={{
         loans: loans,
         rateFix: rateFix,
-        rateVariable: rateVariable(100),
+        rateVariable: rateVariable,
         isLoading: isLoading,
         error: error,
         fetchingdata: fetchHandler,
