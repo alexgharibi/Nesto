@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useBestRate from "../hooks/use-bestRate";
 
 const LoansContext = React.createContext({
   loans: [],
@@ -44,28 +45,19 @@ export const LoansContextProvider = (props) => {
     return fix.type === "FIXED";
   });
 
-  const rateFix = function bestRateFix(y) {
-    for (let i = 0; i < fix.length; i++) {
-      if (fix[i].bestRate < y) y = fix[i].bestRate;
-    }
-    return y;
-  };
   const variable = loans.filter((variable) => {
     return variable.type === "VARIABLE";
   });
 
-  const rateVariable = function bestRateVariable(y) {
-    for (let i = 0; i < variable.length; i++) {
-      if (variable[i].bestRate < y) y = variable[i].bestRate;
-    }
-    return y;
-  };
+  const rateFix = useBestRate(fix);
+
+  const rateVariable = useBestRate(variable);
 
   return (
     <LoansContext.Provider
       value={{
         loans: loans,
-        rateFix: rateFix(100),
+        rateFix: rateFix,
         rateVariable: rateVariable(100),
         isLoading: isLoading,
         error: error,
