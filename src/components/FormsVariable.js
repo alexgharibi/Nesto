@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import InputForm from "./Inputs";
-import { useTranslation } from "react-i18next";
 import CardVariable from "./CardVariable";
 import LoansContext from "../State/loans-context";
+import InputForm from "./Inputs";
+import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import classes from "./Forms.module.css";
 
 const FormsVariable = () => {

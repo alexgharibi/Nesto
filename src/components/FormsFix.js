@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import InputForm from "./Inputs";
-import { useHistory } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import CardFixed from "./CardFixed";
 import LoansContext from "../State/loans-context";
+import { useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import classes from "./Forms.module.css";
 
 const FormsFix = () => {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { useTranslation } from "react-i18next";
 import logo from "../images/logo.png";
 import LoansContext from "./../State/loans-context";
+import { useTranslation } from "react-i18next";
 import classes from "./Header.module.css";
 
 const Header = () => {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import LoansContext from "../State/loans-context";
 import { useHistory } from "react-router";
 import { useTranslation } from "react-i18next";
-import LoansContext from "../State/loans-context";
 import classes from "./Card.module.css";
 
 const CardFixed = (props) => {

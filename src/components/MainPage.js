@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import LoansContext from "../State/loans-context";
 import image1 from "../images/image1.jpg";
 import LoanList from "./LoanList";
+import { useTranslation } from "react-i18next";
 import classes from "./MainPage.module.css";
 
 const MainPage = () => {

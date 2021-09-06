@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router";
 import LoansContext from "../State/loans-context";
 import CardFixed from "./CardFixed";
 import CardVariable from "./CardVariable";
+import { useHistory } from "react-router";
 import { useTranslation } from "react-i18next";
 import classes from "./LoanList.module.css";
 
