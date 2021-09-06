@@ -1,0 +1,57 @@
+.body-main {
+  font-size: 13px;
+}
+
+.body-main > img {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .body-main {
+    font-size: 1.2em;
+  }
+  .body-main > img {
+    margin-top: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+.content {
+  color: white;
+  text-align: center;
+}
+
+.content--img {
+  box-shadow: 0 0 20px 10px #424040;
+  overflow: hidden;
+}
+
+.selector {
+  appearance: none;
+  border-color: transparent;
+  border: none;
+  margin-left: 87%;
+  margin-top: 20px;
+  padding: 0 10px 0 0;
+  outline: none;
+  background-color: rgb(34, 31, 31);
+  color: #ccc;
+  font-size: 15px;
+}
+
+.selector::-ms-expand {
+  display: none;
+}
+
+.selector:hover {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .selector {
+    margin-left: 95%;
+  }
+}

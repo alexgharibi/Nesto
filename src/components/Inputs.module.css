@@ -1,0 +1,16 @@
+.form-body {
+  margin: 30px 30px 0 30px;
+  color: white;
+}
+
+.error-text {
+  color: #b40e0e;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.form-actions button {
+  margin-left: 1rem;
+}
