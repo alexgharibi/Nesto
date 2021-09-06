@@ -3,6 +3,7 @@ const useBestRate = (loantype) => {
   for (let i = 0; i < loantype.length; i++) {
     if (loantype[i].bestRate < y) y = loantype[i].bestRate;
   }
+
   return y;
 };
 
