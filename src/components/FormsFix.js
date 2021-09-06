@@ -8,6 +8,7 @@ import classes from "./Forms.module.css";
 
 const FormsFix = () => {
   const ctx = useContext(LoansContext);
+
   const history = useHistory();
 
   const { t } = useTranslation();
@@ -18,8 +19,6 @@ const FormsFix = () => {
     })
     .map((loan) => loan.id)
     .join("");
-
-  console.log(id);
 
   function addSubmitedFormHandler(submitedForm) {
     fetch("https://nesto-fe-exam.vercel.app/api/applications", {
@@ -33,6 +32,7 @@ const FormsFix = () => {
       },
     });
   }
+
   return (
     <div>
       <div className={classes.grid}>

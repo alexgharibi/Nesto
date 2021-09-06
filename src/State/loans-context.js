@@ -11,8 +11,6 @@ export const LoansContextProvider = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  /*Fetching*/
-
   const DEFAULT_HEADERS = {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -41,8 +39,6 @@ export const LoansContextProvider = (props) => {
     }
     setIsLoading(false);
   }
-
-  /*Filtering products*/
 
   const fix = loans.filter((fix) => {
     return fix.type === "FIXED";

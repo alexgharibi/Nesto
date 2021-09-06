@@ -8,6 +8,7 @@ import classes from "./MainPage.module.css";
 
 const MainPage = () => {
   const ctx = useContext(LoansContext);
+
   const { t } = useTranslation();
 
   const onChange = (event) => {

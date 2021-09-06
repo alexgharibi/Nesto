@@ -8,6 +8,7 @@ import classes from "./Forms.module.css";
 
 const FormsVariable = () => {
   const ctx = useContext(LoansContext);
+
   const history = useHistory();
 
   const { t } = useTranslation();

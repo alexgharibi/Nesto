@@ -6,7 +6,9 @@ import classes from "./Header.module.css";
 
 const Header = () => {
   const ctx = useContext(LoansContext);
+
   const { t } = useTranslation();
+
   return (
     <header className={classes.header}>
       <img src={logo} />

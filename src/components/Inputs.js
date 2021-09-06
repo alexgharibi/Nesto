@@ -5,6 +5,7 @@ import classes from "./Inputs.module.css";
 
 const InputForm = (props) => {
   const isNotEmptty = (value) => value.trim() !== "";
+
   const isEmail = (value) => value.includes("@");
 
   const { t } = useTranslation();

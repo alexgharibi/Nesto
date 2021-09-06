@@ -8,8 +8,11 @@ import classes from "./LoanList.module.css";
 
 const LoanList = () => {
   const ctx = useContext(LoansContext);
+
   const history = useHistory();
+
   const { t } = useTranslation();
+
   return (
     <div className={classes.grid}>
       <div className={classes.list}>
