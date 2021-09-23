@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Main.module.css";
 import { shirts } from "./shirtData";
 import StarsRating from "./StarsRating";
+import { Cart } from "./Cart";
+import { CartContext } from "./CartContext";
 
 const Main = () => {
+  const [cart, setCart] = useContext(CartContext);
+
+  const addToCart = () => {
+    const shirtsList = { title: shirts.title, amount: shirts.amount };
+
+    setCart((curr) => [...curr, shirtsList]);
+  };
   const renderCard = (shirt) => {
     return (
       <div className={classes.block} key={shirt.id}>
         <img src={shirt.image} alt="shirt" />
         <div className={classes["block-p"]}>{shirt.title}</div>
         <div className={classes["block-p"]}>{shirt.amount}</div>
-        <button className={classes.btn}>Add to Card</button>
+        <button onClick={addToCart} className={classes.btn}>
+          Add to Card
+        </button>
         <StarsRating />
+        <Cart />
       </div>
     );
   };
