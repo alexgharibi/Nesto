@@ -1,0 +1,3 @@
+const as = () => {
+  return true;
+};
