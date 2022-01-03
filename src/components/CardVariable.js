@@ -6,7 +6,7 @@ const CardVariable = () => {
   const ctx = useContext(LoansContext);
 
   const bestRateFilteredV = ctx.loans.filter((rate) => {
-    return rate.bestRate === ctx.rateVariable;
+    return rate.bestRate === ctx.bestRateVariableLoan;
   });
 
   const cardVariable = (

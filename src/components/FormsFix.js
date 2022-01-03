@@ -14,13 +14,11 @@ const FormsFix = () => {
   const { t } = useTranslation();
 
   const id = ctx.loans
-    .filter((rate) => {
-      return rate.bestRate === ctx.rateFix;
-    })
+    .filter((rate) => rate.bestRate === ctx.bestRateFixLoan)
     .map((loan) => loan.id)
     .join("");
 
-  function addSubmitedFormHandler(submitedForm) {
+  const addSubmitedFormHandler = (submitedForm) => {
     fetch("https://nesto-fe-exam.vercel.app/api/applications", {
       method: "POST",
       body: JSON.stringify({
@@ -31,7 +29,7 @@ const FormsFix = () => {
         "Content-Type": "application/json",
       },
     });
-  }
+  };
 
   return (
     <div>

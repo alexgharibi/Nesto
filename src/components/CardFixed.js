@@ -6,7 +6,7 @@ const CardFixed = () => {
   const ctx = useContext(LoansContext);
 
   const bestRateFilteredF = ctx.loans.filter((rate) => {
-    return rate.bestRate === ctx.rateFix;
+    return rate.bestRate === ctx.bestRateFixLoan;
   });
 
   const cardFixed = (
