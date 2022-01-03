@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const useHttp = (requestConfig) => {
-  const [loans, setLoans] = useState([]);
+  const [loans, setLoans] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
