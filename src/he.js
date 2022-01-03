@@ -1,3 +1,0 @@
-const as = () => {
-  return true;
-};

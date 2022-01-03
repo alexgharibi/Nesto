@@ -7,20 +7,22 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Switch>
-        <Route path="/" exact>
-          <Header />
-          <MainPage />
-        </Route>
-        <Route path="/variable">
-          <FormsVariable />
-        </Route>
-        <Route path="/fix">
-          <FormsFix />
-        </Route>
+        <Route
+          path="/"
+          exact
+          element={
+            <>
+              <Header />
+              <MainPage />
+            </>
+          }
+        />
+        <Route path="/variable" element={<FormsVariable />} />
+        <Route path="/fix" element={<FormsFix />} />
       </Switch>
-    </React.Fragment>
+    </>
   );
 }
 
